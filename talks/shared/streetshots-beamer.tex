@@ -41,9 +41,18 @@
     \vskip1.6mm%
     \hbox to \paperwidth{%
       \hskip9mm%
-      \raisebox{1.45mm}{\usebeamerfont{footline}\href{https://streetshots.io/}{streetshots.io}}%
+      \makebox[25mm][l]{%
+        \raisebox{1.45mm}{\usebeamerfont{footline}\href{https://streetshots.io/}{streetshots.io}}%
+      }%
       \hfil
-      \includegraphics[height=5.4mm]{../../assets/HS_PF_logo_20170502.jpg}%
+      \raisebox{1.45mm}{%
+        \usebeamerfont{footline}\mdseries\color{StreetshotsMuted}%
+        \insertframenumber\enspace\textperiodcentered\enspace
+        \insertshorttitle\enspace\textperiodcentered\enspace
+        \insertshortdate
+      }%
+      \hfil
+      \makebox[25mm][r]{\includegraphics[height=5.4mm]{../../assets/HS_PF_logo_20170502.jpg}}%
       \hskip9mm%
     }%
     \vskip1.7mm%
