@@ -1,0 +1,51 @@
+% Shared Beamer layout. Compile from the individual talk directory.
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{tgheros}
+
+\definecolor{StreetshotsInk}{HTML}{17232B}
+\definecolor{StreetshotsMuted}{HTML}{485861}
+\definecolor{StreetshotsLink}{HTML}{15596D}
+\definecolor{StreetshotsRule}{HTML}{DCE2E5}
+
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=StreetshotsInk,bg=white}
+\setbeamercolor{structure}{fg=StreetshotsInk}
+\setbeamercolor{subtitle}{fg=StreetshotsMuted}
+\setbeamercolor{caption}{fg=StreetshotsMuted}
+\setbeamercolor{footline}{fg=StreetshotsInk,bg=white}
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
+\setbeamerfont{title}{size=\huge,series=\bfseries}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{footline}{size=\scriptsize,series=\bfseries}
+
+\setbeamersize{text margin left=9mm,text margin right=9mm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize item}{\raisebox{0.26ex}{\rule{0.43ex}{0.43ex}}}
+\setbeamertemplate{itemize subitem}{\raisebox{0.25ex}{\rule{0.65ex}{0.12ex}}}
+\addtobeamertemplate{itemize/enumerate body begin}{}{\setlength{\itemsep}{0.52em}}
+\addtobeamertemplate{itemize/enumerate subbody begin}{}{\setlength{\itemsep}{0.30em}}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,leftskip=9mm,rightskip=9mm]{frametitle}
+    \vskip4.4mm%
+    \usebeamerfont{frametitle}\insertframetitle\par
+    \vskip1.5mm%
+  \end{beamercolorbox}%
+}
+
+\setbeamertemplate{footline}{%
+  \begin{beamercolorbox}[wd=\paperwidth]{footline}
+    {\color{StreetshotsRule}\hrule height 0.25pt}%
+    \vskip1.6mm%
+    \hbox to \paperwidth{%
+      \hskip9mm%
+      \raisebox{1.45mm}{\usebeamerfont{footline}\href{https://streetshots.io/}{streetshots.io}}%
+      \hfil
+      \includegraphics[height=5.4mm]{../../assets/HS_PF_logo_20170502.jpg}%
+      \hskip9mm%
+    }%
+    \vskip1.7mm%
+  \end{beamercolorbox}%
+}
