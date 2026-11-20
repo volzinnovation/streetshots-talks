@@ -26,6 +26,13 @@ Keep presentation work in this repository. Use the relevant sister repository fo
 - Preserve the version delivered at each event. When changing shared material would alter a past talk or prevent it from building, give the changed material a new path or keep the past talk's dependency with that talk.
 - Reference common frames and assets using relative paths within the repository. When copying a deck, check that its references still resolve from the directory where it is compiled.
 
+## Beamer layout
+
+- Use the shared Beamer template in `talks/shared/`. Keep the slide background white, with restrained styling and generous whitespace.
+- Use the `streetshots.io` wordmark as the logo at the bottom left of the slide footer. Include the wordmark on the title slide as well.
+- Place the Hochschule Pforzheim (HSPF) logo from `assets/HS_PF_logo_20170502.jpg` at the bottom right of the slide footer. Preserve its aspect ratio and leave room for both logos when laying out slide content.
+- Use the title wording supplied in the user's presentation instructions. Set the presentation title and any supplied frame titles in the talk source so they can vary by event.
+
 ## Building and checking slides
 
 - Compile the affected deck from its talk directory with the LaTeX engine specified by the deck. For a pdfLaTeX deck, use `latexmk -pdf -interaction=nonstopmode -halt-on-error <deck>.tex` with the actual entry-point filename.
